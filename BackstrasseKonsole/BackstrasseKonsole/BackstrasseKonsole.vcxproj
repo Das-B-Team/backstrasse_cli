@@ -151,7 +151,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="backstrasse.cpp" />
     <ClCompile Include="BackstrasseKonsole.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="backstrasse.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
