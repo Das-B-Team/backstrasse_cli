@@ -20,7 +20,7 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
-    <ProjectGuid>{84377329-28D8-49EC-A03E-FDED76C92C06}</ProjectGuid>
+    <ProjectGuid>{C6E8B227-CCA7-45D1-9C75-31BC45E1D8FE}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>BackstrasseKonsole</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
