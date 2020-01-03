@@ -21,9 +21,15 @@
     <ClCompile Include="backstrasse.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
+    <ClCompile Include="Vorrat.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="backstrasse.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="Vorrat.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
   </ItemGroup>
