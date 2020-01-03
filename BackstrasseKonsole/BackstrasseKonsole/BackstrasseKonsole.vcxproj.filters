@@ -18,18 +18,18 @@
     <ClCompile Include="BackstrasseKonsole.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
-    <ClCompile Include="backstrasse.cpp">
+    <ClCompile Include="Vorrat.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
-    <ClCompile Include="Vorrat.cpp">
+    <ClCompile Include="Backstrasse.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="backstrasse.h">
+    <ClInclude Include="Vorrat.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
-    <ClInclude Include="Vorrat.h">
+    <ClInclude Include="Backstrasse.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
   </ItemGroup>
