@@ -18,6 +18,10 @@
     <ClCompile Include="BackstrasseKonsole.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
+    <ClCompile Include="Vorrat.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="Backstrasse.cpp">
     <ClCompile Include="Band.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
@@ -26,6 +30,10 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Vorrat.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="Backstrasse.h">
     <ClInclude Include="Band.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
