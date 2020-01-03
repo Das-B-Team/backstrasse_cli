@@ -3,24 +3,24 @@
 using namespace std;
 
 Band::Band(): 
-	bandgeschwind {0}
+	bandgsw {0}
 {
 }
 
 Band::Band(double b) :
-	bandgeschwind {b}
+	bandgsw {b}
 {
 }
 
 void Band::setSpeed(double b)
 {
-	bandgeschwind = b;
+	bandgsw = b;
 }
 
 
 double Band::getSpeed()
 {
-	return 	 0;
+	return bandgsw;
 }
 
 
