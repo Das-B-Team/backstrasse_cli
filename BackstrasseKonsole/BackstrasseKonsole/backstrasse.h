@@ -1,5 +1,5 @@
 #pragma once
-class backstrasse
+class Backstrasse
 {
 private:
 	int anzahlBackblech;
@@ -8,7 +8,7 @@ private:
 	// Band* ba;
 	// Vorrat* Vr;
 public:
-	backstrasse();
-	~backstrasse();
+	Backstrasse();
+	~Backstrasse();
 };
 
