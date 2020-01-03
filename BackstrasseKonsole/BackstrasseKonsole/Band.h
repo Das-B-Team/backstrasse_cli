@@ -3,7 +3,7 @@
 //- Eine Klasse für Band-//
 class Band
 {
-	double  bandgeschwind;
+	double  geschwind;
 
 
 

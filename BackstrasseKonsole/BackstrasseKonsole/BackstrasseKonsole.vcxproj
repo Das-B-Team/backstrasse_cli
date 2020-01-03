@@ -153,9 +153,11 @@
   <ItemGroup>
     <ClCompile Include="BackstrasseKonsole.cpp" />
     <ClCompile Include="Band.cpp" />
+    <ClCompile Include="Ofen.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Band.h" />
+    <ClInclude Include="Ofen.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

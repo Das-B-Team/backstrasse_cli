@@ -3,18 +3,18 @@
 using namespace std;
 
 Band::Band(): 
-	bandgeschwind {0}
+	geschwind {0}
 {
 }
 
 Band::Band(double b) :
-	bandgeschwind {b}
+	geschwind {b}
 {
 }
 
 void Band::setSpeed(double b)
 {
-	bandgeschwind = b;
+	geschwind = b;
 }
 
 
