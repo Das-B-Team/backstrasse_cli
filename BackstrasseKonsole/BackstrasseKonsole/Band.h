@@ -1,9 +1,9 @@
 #pragma once
 #include <iostream>
-//- Eine Klasse für Band-//
+//- Eine Klasse fÃ¼r Band-//
 class Band
 {
-	double  bandgeschwind;
+	double  bandgsw;
 
 
 
