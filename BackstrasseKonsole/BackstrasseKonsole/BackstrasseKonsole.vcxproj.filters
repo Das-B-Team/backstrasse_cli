@@ -21,9 +21,15 @@
     <ClCompile Include="Band.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
+    <ClCompile Include="Ofen.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Band.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="Ofen.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
   </ItemGroup>
