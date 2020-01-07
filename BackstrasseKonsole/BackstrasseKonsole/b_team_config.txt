@@ -1,0 +1,13 @@
+#Bezeichnung|Anzahl|X|Y|Backzeit|Backtemperatur|Form
+|Plaetzchen|4|20|25|30|200|Gringel|
+#Bezeichnung|Mehl|Milch|Eier|Backpulver|Zucker|Nuesse|Kakao|
+|Teig|3,48459077951374|0,923417280761146|0,0108885874797249|3,04901305062449|0|0|
+#Verzierung|No|Mehl|Zucker|Nuesse|Farbe
+|Nuesse|0|0|0|0,934153|Gruen|
+|Streusel|1|9,378|1,1462|0|Rot|
+|Guss|2|0|1,563|0|Blau|
+#Gesammt Angaben in KG
+#|Mehl|Milch|Eier|Backpulver|Zucker|Nuesse|Kakao|
+|0,05145036|0,003136135|0,003693669|4,355435E-05|0,02303285|0,003736612|0|
+#Bezeichnung|Anzahl|
+|Backblech|1|
