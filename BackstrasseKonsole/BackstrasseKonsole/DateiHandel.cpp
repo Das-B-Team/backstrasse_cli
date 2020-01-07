@@ -38,7 +38,7 @@ void DateiHandel::dateiLesen(Auftrag * a)
 	regex reGes("\\|([\\d,.E-]+)\\|([\\d,.E-]+)\\|([\\d,.E-]+)\\|([\\d,.E-]+)\\|([\\d,.E-]+)\\|([\\d,.E-]+)\\|([\\d,.E-]+)\\|");
 
 	// Regex fuer die Plaetzchen-Daten
-	// regex rePl("\\|(Plaetzchen)\\|([\\d,.E-]+)\\|([\\d,.E-]+)\\|([\\d,.E-]+)\\|([\\d,.E-]+)\\|([\\d,.E-]+)\\|([\\w]+)\\|");
+	 regex rePl("\\|(Plaetzchen)\\|([\\d,.E-]+)\\|([\\d,.E-]+)\\|([\\d,.E-]+)\\|([\\d,.E-]+)\\|([\\d,.E-]+)\\|([\\w]+)\\|");
 	
 	smatch match;
 
@@ -47,6 +47,7 @@ void DateiHandel::dateiLesen(Auftrag * a)
 		regex_search(st, match, reGes);
 		if (!match.empty())
 		{
+			cout << match.str(0) << endl;
 			a->setGesamtMehl(stof(match.str(1)));
 			a->setGesamtMilch(stof(match.str(2)));
 			a->setGesamtEier(stof(match.str(3)));
@@ -54,12 +55,21 @@ void DateiHandel::dateiLesen(Auftrag * a)
 			a->setGesamtZucker(stof(match.str(5)));
 			a->setGesamtNuesse(stof(match.str(6)));
 			a->setGesamtKakao(stof(match.str(7)));
+			continue;
 		}
 
-		//regex_search(st, match, rePl);
-		//if (!match.empty())
-		//{
-		//}
+		regex_search(st, match, rePl);
+		if (!match.empty())
+		{
+			cout << match.str(0) << endl;
+			a->setAnzPlaetzchen(stoi(match.str(2)));
+			a->setPlaetzchenX(stof(match.str(3)));
+			a->setPlaetzchenY(stof(match.str(4)));
+			a->setBackzeit(stof(match.str(5)));
+			a->setBacktemperatur(stof(match.str(6)));
+			a->setPlaetzchenForm(match.str(7));
+			continue;
+		}
 	}
 
 	f->close();

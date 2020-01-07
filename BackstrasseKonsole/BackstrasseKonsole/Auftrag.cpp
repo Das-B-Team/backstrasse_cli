@@ -46,6 +46,36 @@ void Auftrag::setGesamtKakao(float f)
 	gesamtKakao = f;
 }
 
+void Auftrag::setAnzPlaetzchen(int i)
+{
+	anzPlaetzchen = i;
+}
+
+void Auftrag::setPlaetzchenX(float f)
+{
+	plaetzchenX = f;
+}
+
+void Auftrag::setPlaetzchenY(float f)
+{
+	plaetzchenY = f;
+}
+
+void Auftrag::setBackzeit(float f)
+{
+	backzeit = f;
+}
+
+void Auftrag::setBacktemperatur(float f)
+{
+	backtemperatur = f;
+}
+
+void Auftrag::setPlaetzchenForm(string s)
+{
+	plaetzchenForm = s;
+}
+
 float Auftrag::getGesamtMehl()
 {
 	return gesamtMehl;
@@ -79,4 +109,34 @@ float Auftrag::getGesamtNuesse()
 float Auftrag::getGesamtKakao()
 {
 	return gesamtKakao;
+}
+
+int Auftrag::getAnzPlaetzchen()
+{
+	return anzPlaetzchen;
+}
+
+float Auftrag::getPlaetzchenX()
+{
+	return plaetzchenX;
+}
+
+float Auftrag::getPlaetzchenY()
+{
+	return plaetzchenY;
+}
+
+float Auftrag::getBackzeit()
+{
+	return backzeit;
+}
+
+float Auftrag::getBacktemperatur()
+{
+	return backtemperatur;
+}
+
+string Auftrag::getPlaetzchenForm()
+{
+	return plaetzchenForm;
 }

@@ -1,4 +1,6 @@
 #pragma once
+#include <iostream>
+using namespace std;
 
 class Auftrag
 {
@@ -12,7 +14,11 @@ private:
 	float gesamtKakao;
 
 	int anzPlaetzchen;
-	float temperatur;
+	float plaetzchenX;
+	float plaetzchenY;
+	float backzeit;
+	float backtemperatur;
+	string plaetzchenForm;
 
 public:
 	Auftrag();
@@ -24,6 +30,14 @@ public:
 	void setGesamtZucker(float);
 	void setGesamtNuesse(float);
 	void setGesamtKakao(float);
+
+	void setAnzPlaetzchen(int);
+	void setPlaetzchenX(float);
+	void setPlaetzchenY(float);
+	void setBackzeit(float);
+	void setBacktemperatur(float);
+	void setPlaetzchenForm(string);
+
 	float getGesamtMehl();
 	float getGesamtMilch();
 	float getGesamtEier();
@@ -31,5 +45,13 @@ public:
 	float getGesamtZucker();
 	float getGesamtNuesse();
 	float getGesamtKakao();
+
+	int getAnzPlaetzchen();
+	float getPlaetzchenX();
+	float getPlaetzchenY();
+	float getBackzeit();
+	float getBacktemperatur();
+	string getPlaetzchenForm();
+
 };
 
