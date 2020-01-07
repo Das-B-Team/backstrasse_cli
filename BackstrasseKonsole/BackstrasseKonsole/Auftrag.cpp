@@ -1,7 +1,6 @@
 #include "Auftrag.h"
 
 
-
 Auftrag::Auftrag()
 {
 }
@@ -76,6 +75,12 @@ void Auftrag::setPlaetzchenForm(string s)
 	plaetzchenForm = s;
 }
 
+void Auftrag::setAnzBachbleche(int i)
+{
+	anzBachbleche = i;
+}
+
+
 float Auftrag::getGesamtMehl()
 {
 	return gesamtMehl;
@@ -139,4 +144,9 @@ float Auftrag::getBacktemperatur()
 string Auftrag::getPlaetzchenForm()
 {
 	return plaetzchenForm;
+}
+
+int Auftrag::getAnzBachbleche()
+{
+	return anzBachbleche;
 }

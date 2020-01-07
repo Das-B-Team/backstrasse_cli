@@ -12,13 +12,13 @@ private:
 	float gesamtZucker;
 	float gesamtNuesse;
 	float gesamtKakao;
-
 	int anzPlaetzchen;
 	float plaetzchenX;
 	float plaetzchenY;
 	float backzeit;
 	float backtemperatur;
 	string plaetzchenForm;
+	int anzBachbleche;
 
 public:
 	Auftrag();
@@ -38,6 +38,8 @@ public:
 	void setBacktemperatur(float);
 	void setPlaetzchenForm(string);
 
+	void setAnzBachbleche(int);
+
 	float getGesamtMehl();
 	float getGesamtMilch();
 	float getGesamtEier();
@@ -52,6 +54,8 @@ public:
 	float getBackzeit();
 	float getBacktemperatur();
 	string getPlaetzchenForm();
+
+	int getAnzBachbleche();
 
 };
 
