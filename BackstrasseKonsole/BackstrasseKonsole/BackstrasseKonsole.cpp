@@ -2,14 +2,16 @@
 #include <locale>
 #include "Auftrag.h"
 #include "DateiHandel.h"
+#include "Backstrasse.h"
+#include "Datei.h"
 
 using namespace std;
 
 int main()
 {
-	locale::global(locale(""));  // für deutsche Umlaute
-	cout.imbue(locale(""));  // für das Komma
-	cin.imbue(locale(""));  // für das Komma
+	locale::global(locale(""));  // fï¿½r deutsche Umlaute
+	cout.imbue(locale(""));  // fï¿½r das Komma
+	cin.imbue(locale(""));  // fï¿½r das Komma
 
 	Auftrag* a = new Auftrag();
 
@@ -35,5 +37,10 @@ int main()
 
 	//cout << endl;
 
-    return 0; 
+   
+  //  Datei* my_datei = new Datei("b_team_config.txt");
+	// my_datei->dateiLesen();
+	// my_datei->berechneZeilen();
+    
+  return 0; 
 }
