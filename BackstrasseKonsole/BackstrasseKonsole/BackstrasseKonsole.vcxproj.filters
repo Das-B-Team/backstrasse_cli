@@ -6,6 +6,9 @@
     <ClCompile Include="Vorrat.cpp" />
     <ClCompile Include="Band.cpp" />
     <ClCompile Include="Ofen.cpp" />
+    <ClCompile Include="Auftrag.cpp" />
+    <ClCompile Include="DateiHandel.cpp" />
+    <ClCompile Include="Plaetzchen.cpp" />
     <ClCompile Include="Datei.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -13,6 +16,12 @@
     <ClInclude Include="Vorrat.h" />
     <ClInclude Include="Band.h" />
     <ClInclude Include="Ofen.h" />
+    <ClInclude Include="Auftrag.h" />
+    <ClInclude Include="DateiHandel.h" />
+    <ClInclude Include="Plaetzchen.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="b_team_config.txt" />
     <ClInclude Include="Datei.h" />
   </ItemGroup>
 </Project>

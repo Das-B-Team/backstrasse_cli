@@ -151,17 +151,26 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Auftrag.cpp" />
     <ClCompile Include="Backstrasse.cpp" />
     <ClCompile Include="BackstrasseKonsole.cpp" />
+    <ClCompile Include="DateiHandel.cpp" />
+    <ClCompile Include="Plaetzchen.cpp" />
     <ClCompile Include="Datei.cpp" />
     <ClCompile Include="Vorrat.cpp" />
+    <ClInclude Include="Auftrag.h" />
     <ClInclude Include="Backstrasse.h" />
+    <ClInclude Include="DateiHandel.h" />
+    <ClInclude Include="Plaetzchen.h" />
     <ClInclude Include="Datei.h" />
     <ClInclude Include="Vorrat.h" />
     <ClCompile Include="Band.cpp" />
     <ClCompile Include="Ofen.cpp" />
     <ClInclude Include="Band.h" />
     <ClInclude Include="Ofen.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="b_team_config.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
