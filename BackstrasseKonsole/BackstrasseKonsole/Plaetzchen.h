@@ -15,6 +15,7 @@ private:
 public:
 	Plaetzchen();
 	~Plaetzchen();
+
 	void setAnzahl(int);
 	void setX(float);
 	void setY(float);
@@ -28,5 +29,6 @@ public:
 	float getBackzeit();
 	float setBacktemperatur();
 	string getForm();
+
 };
 

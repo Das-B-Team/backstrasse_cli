@@ -1,30 +1,32 @@
 #pragma once
+
 class Auftrag
 {
 private:
-	float bedarfMehl;
-	float bedarfMilch;
-	float bedarfEier;
-	float bedarfBackpulver;
-	float bedarfZucker;
-	float bedarfNuesse;
-	float bedarfKakao;
+	float gesamtMehl;
+	float gesamtMilch;
+	float gesamtEier;
+	float gesamtBackpulver;
+	float gesamtZucker;
+	float gesamtNuesse;
+	float gesamtKakao;
+
 public:
 	Auftrag();
 	~Auftrag();
-	void setBedarfMehl(float);
-	void setBedarfMilch(float);
-	void setBedarfEier(float);
-	void setBedarfBackpulver(float);
-	void setBedarfZucker(float);
-	void setBedarfNuesse(float);
-	void setBedarfKakao(float);
-	float getBedarfMehl();
-	float getBedarfMilch();
-	float getBedarfEier();
-	float getBedarfBackpulver();
-	float getBedarfZucker();
-	float getBedarfNuesse();
-	float getBedarfKakao();
+	void setGesamtMehl(float);
+	void setGesamtMilch(float);
+	void setGesamtEier(float);
+	void setGesamtBackpulver(float);
+	void setGesamtZucker(float);
+	void setGesamtNuesse(float);
+	void setGesamtKakao(float);
+	float getGesamtMehl();
+	float getGesamtMilch();
+	float getGesamtEier();
+	float getGesamtBackpulver();
+	float getGesamtZucker();
+	float getGesamtNuesse();
+	float getGesamtKakao();
 };
 

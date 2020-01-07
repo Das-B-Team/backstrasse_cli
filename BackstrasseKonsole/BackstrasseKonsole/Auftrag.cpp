@@ -11,72 +11,72 @@ Auftrag::~Auftrag()
 {
 }
 
-void Auftrag::setBedarfMehl(float f)
+void Auftrag::setGesamtMehl(float f)
 {
-	bedarfMehl = f;
+	gesamtMehl = f;
 }
 
-void Auftrag::setBedarfMilch(float f)
+void Auftrag::setGesamtMilch(float f)
 {
-	bedarfMilch = f;
+	gesamtMilch = f;
 }
 
-void Auftrag::setBedarfEier(float f)
+void Auftrag::setGesamtEier(float f)
 {
-	bedarfEier = f;
+	gesamtEier = f;
 }
 
-void Auftrag::setBedarfBackpulver(float f)
+void Auftrag::setGesamtBackpulver(float f)
 {
-	bedarfBackpulver = f;
+	gesamtBackpulver = f;
 }
 
-void Auftrag::setBedarfZucker(float f)
+void Auftrag::setGesamtZucker(float f)
 {
-	bedarfZucker = f;
+	gesamtZucker = f;
 }
 
-void Auftrag::setBedarfNuesse(float f)
+void Auftrag::setGesamtNuesse(float f)
 {
-	bedarfNuesse = f;
+	gesamtNuesse = f;
 }
 
-void Auftrag::setBedarfKakao(float f)
+void Auftrag::setGesamtKakao(float f)
 {
-	bedarfKakao = f;
+	gesamtKakao = f;
 }
 
-float Auftrag::getBedarfMehl()
+float Auftrag::getGesamtMehl()
 {
-	return bedarfMehl;
+	return gesamtMehl;
 }
 
-float Auftrag::getBedarfMilch()
+float Auftrag::getGesamtMilch()
 {
-	return bedarfMilch;
+	return gesamtMilch;
 }
 
-float Auftrag::getBedarfEier()
+float Auftrag::getGesamtEier()
 {
-	return bedarfEier;
+	return gesamtEier;
 }
 
-float Auftrag::getBedarfBackpulver()
+float Auftrag::getGesamtBackpulver()
 {
-	return bedarfBackpulver;
+	return gesamtBackpulver;
 }
 
-float Auftrag::getBedarfZucker()
+float Auftrag::getGesamtZucker()
 {
-	return bedarfZucker;
+	return gesamtZucker;
 }
 
-float Auftrag::getBedarfNuesse()
+float Auftrag::getGesamtNuesse()
 {
-	return bedarfNuesse;
+	return gesamtNuesse;
 }
 
-float Auftrag::getBedarfKakao()
+float Auftrag::getGesamtKakao()
 {
-	return bedarfKakao;
+	return gesamtKakao;
 }

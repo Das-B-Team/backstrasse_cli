@@ -34,26 +34,32 @@ void DateiHandel::dateiLesen(Auftrag * a)
 	f->open(pfad, ios::in);
 	Dateioffenpruefen(f);
 
-	regex re("\\|([\\d,.E-]+)\\|([\\d,.E-]+)\\|([\\d,.E-]+)\\|([\\d,.E-]+)\\|([\\d,.E-]+)\\|([\\d,.E-]+)\\|([\\d,.E-]+)\\|");
+	// Regex fuer den Gesamtbedarf
+	regex reGes("\\|([\\d,.E-]+)\\|([\\d,.E-]+)\\|([\\d,.E-]+)\\|([\\d,.E-]+)\\|([\\d,.E-]+)\\|([\\d,.E-]+)\\|([\\d,.E-]+)\\|");
+
+	// Regex fuer die Plaetzchen-Daten
+	// regex rePl("\\|(Plaetzchen)\\|([\\d,.E-]+)\\|([\\d,.E-]+)\\|([\\d,.E-]+)\\|([\\d,.E-]+)\\|([\\d,.E-]+)\\|([\\w]+)\\|");
 	
 	smatch match;
 
 	while (getline(*f, st))
 	{
-		regex_search(st, match, re);
-
-		// change following line to correct match condition (7 pipe-separated numbers)
+		regex_search(st, match, reGes);
 		if (!match.empty())
 		{
-			a->setBedarfMehl(stof(match.str(1)));
-			a->setBedarfMilch(stof(match.str(2)));
-			a->setBedarfEier(stof(match.str(3)));
-			a->setBedarfBackpulver(stof(match.str(4)));
-			a->setBedarfZucker(stof(match.str(5)));
-			a->setBedarfNuesse(stof(match.str(6)));
-			a->setBedarfKakao(stof(match.str(7)));
-			break;
+			a->setGesamtMehl(stof(match.str(1)));
+			a->setGesamtMilch(stof(match.str(2)));
+			a->setGesamtEier(stof(match.str(3)));
+			a->setGesamtBackpulver(stof(match.str(4)));
+			a->setGesamtZucker(stof(match.str(5)));
+			a->setGesamtNuesse(stof(match.str(6)));
+			a->setGesamtKakao(stof(match.str(7)));
 		}
+
+		//regex_search(st, match, rePl);
+		//if (!match.empty())
+		//{
+		//}
 	}
 
 	f->close();

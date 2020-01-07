@@ -3,7 +3,6 @@
 #include "Auftrag.h"
 #include "DateiHandel.h"
 
-
 using namespace std;
 
 int main()
@@ -18,13 +17,15 @@ int main()
 
 	d.dateiLesen(a);
 
-	cout << "Mehl = " << a->getBedarfMehl() << endl;
-	cout << "Milch = " << a->getBedarfMilch() << endl;
-	cout << "Eier = " << a->getBedarfEier() << endl;
-	cout << "Backpulver = " << a->getBedarfBackpulver() << endl;
-	cout << "Zucker = " << a->getBedarfZucker() << endl;
-	cout << "Nuesse = " << a->getBedarfNuesse() << endl;
-	cout << "Kakao = " << a->getBedarfKakao() << endl;
+	cout << "Mehl = " << a->getGesamtMehl() << endl;
+	cout << "Milch = " << a->getGesamtMilch() << endl;
+	cout << "Eier = " << a->getGesamtEier() << endl;
+	cout << "Backpulver = " << a->getGesamtBackpulver() << endl;
+	cout << "Zucker = " << a->getGesamtZucker() << endl;
+	cout << "Nuesse = " << a->getGesamtNuesse() << endl;
+	cout << "Kakao = " << a->getGesamtKakao() << endl;
+
+	cout << endl;
 
     return 0; 
 }
