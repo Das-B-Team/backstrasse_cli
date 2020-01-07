@@ -8,6 +8,6 @@
 |Guss|2|0|1,563|0|Blau|
 #Gesammt Angaben in KG
 #|Mehl|Milch|Eier|Backpulver|Zucker|Nuesse|Kakao|
-|0,05145036|0,003136135|0,003693669|4,355435E-05|0,02303285|0,003736612|0|
+|0,2|0,003136135|0,003693669|4,355435E-05|0,02303285|0,003736612|0|
 #Bezeichnung|Anzahl|
 |Backblech|1|

@@ -34,23 +34,17 @@ void DateiHandel::dateiLesen(Auftrag * a)
 	f->open(pfad, ios::in);
 	Dateioffenpruefen(f);
 
-	//regex re("\\|([\d]+)\\|([a-zA-Z]+)\\|([a-zA-Z]+)\\|([0-9]+)\\|([a-zA-Z]+)\\|([a-zA-Z\\.]+)\\|([0-9])+\\|?([a-zA-Z@_\\-\\.]+)?");
-	regex re("\\|([\d]+)\\|");
-
-
+	// TODO: could this regex be made eleganter and robust to all possible input?
+	regex re("\\|([\\d,.E-]+)\\|([\\d,.E-]+)\\|([\\d,.E-]+)\\|([\\d,.E-]+)\\|([\\d,.E-]+)\\|([\\d,.E-]+)\\|([\\d,.E-]+)\\|");
+	
 	smatch match;
 
 	while (getline(*f, st))
 	{
 		regex_search(st, match, re);
-		cout << match.size() << endl;
-		if (match.size == 1)
-		{
 
-		}
-		/*
-		// change following line to correct match condition (7 pipe-separated
-		if (match.str(1) == to_string(kd->getKnr()))
+		// change following line to correct match condition (7 pipe-separated numbers)
+		if (!match.empty())
 		{
 			a->setBedarfMehl(stof(match.str(1)));
 			a->setBedarfMilch(stof(match.str(2)));
@@ -61,7 +55,6 @@ void DateiHandel::dateiLesen(Auftrag * a)
 			a->setBedarfKakao(stof(match.str(7)));
 			break;
 		}
-		*/
 	}
 
 	f->close();
