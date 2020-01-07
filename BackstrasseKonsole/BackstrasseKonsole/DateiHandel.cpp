@@ -34,7 +34,6 @@ void DateiHandel::dateiLesen(Auftrag * a)
 	f->open(pfad, ios::in);
 	Dateioffenpruefen(f);
 
-	// TODO: could this regex be made eleganter and robust to all possible input?
 	regex re("\\|([\\d,.E-]+)\\|([\\d,.E-]+)\\|([\\d,.E-]+)\\|([\\d,.E-]+)\\|([\\d,.E-]+)\\|([\\d,.E-]+)\\|([\\d,.E-]+)\\|");
 	
 	smatch match;

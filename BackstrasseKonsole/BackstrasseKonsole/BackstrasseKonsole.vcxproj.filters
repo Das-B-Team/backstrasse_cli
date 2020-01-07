@@ -8,6 +8,7 @@
     <ClCompile Include="Ofen.cpp" />
     <ClCompile Include="Auftrag.cpp" />
     <ClCompile Include="DateiHandel.cpp" />
+    <ClCompile Include="Plaetzchen.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Backstrasse.h" />
@@ -16,6 +17,7 @@
     <ClInclude Include="Ofen.h" />
     <ClInclude Include="Auftrag.h" />
     <ClInclude Include="DateiHandel.h" />
+    <ClInclude Include="Plaetzchen.h" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="b_team_config.txt" />
