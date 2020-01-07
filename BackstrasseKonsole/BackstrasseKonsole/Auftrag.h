@@ -11,6 +11,9 @@ private:
 	float gesamtNuesse;
 	float gesamtKakao;
 
+	int anzPlaetzchen;
+	float temperatur;
+
 public:
 	Auftrag();
 	~Auftrag();
