@@ -9,6 +9,7 @@
     <ClCompile Include="Auftrag.cpp" />
     <ClCompile Include="DateiHandel.cpp" />
     <ClCompile Include="Plaetzchen.cpp" />
+    <ClCompile Include="Datei.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Backstrasse.h" />
@@ -21,5 +22,6 @@
   </ItemGroup>
   <ItemGroup>
     <Text Include="b_team_config.txt" />
+    <ClInclude Include="Datei.h" />
   </ItemGroup>
 </Project>
