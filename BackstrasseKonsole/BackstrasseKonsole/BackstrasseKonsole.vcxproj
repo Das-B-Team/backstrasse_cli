@@ -153,8 +153,10 @@
   <ItemGroup>
     <ClCompile Include="Backstrasse.cpp" />
     <ClCompile Include="BackstrasseKonsole.cpp" />
+    <ClCompile Include="Datei.cpp" />
     <ClCompile Include="Vorrat.cpp" />
     <ClInclude Include="Backstrasse.h" />
+    <ClInclude Include="Datei.h" />
     <ClInclude Include="Vorrat.h" />
     <ClCompile Include="Band.cpp" />
     <ClCompile Include="Ofen.cpp" />
