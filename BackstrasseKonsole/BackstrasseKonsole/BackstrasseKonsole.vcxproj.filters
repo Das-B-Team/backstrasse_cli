@@ -21,7 +21,6 @@
     <ClInclude Include="Plaetzchen.h" />
   </ItemGroup>
   <ItemGroup>
-    <Text Include="b_team_config.txt" />
     <ClInclude Include="Datei.h" />
   </ItemGroup>
 </Project>

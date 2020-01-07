@@ -169,9 +169,6 @@
     <ClInclude Include="Band.h" />
     <ClInclude Include="Ofen.h" />
   </ItemGroup>
-  <ItemGroup>
-    <Text Include="b_team_config.txt" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

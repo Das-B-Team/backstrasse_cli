@@ -34,12 +34,17 @@ void DateiHandel::dateiLesen(Auftrag * a)
 	f->open(pfad, ios::in);
 	Dateioffenpruefen(f);
 
+	int reGesMatches{ 0 };
+	int rePlMatches{ 0 };
+	int reBbMatches{ 0 };
+
 	// Regex fuer den Gesamtbedarf
 	regex reGes("\\|([\\d,.E-]+)\\|([\\d,.E-]+)\\|([\\d,.E-]+)\\|([\\d,.E-]+)\\|([\\d,.E-]+)\\|([\\d,.E-]+)\\|([\\d,.E-]+)\\|");
-
 	// Regex fuer die Plaetzchen-Daten
-	// regex rePl("\\|(Plaetzchen)\\|([\\d,.E-]+)\\|([\\d,.E-]+)\\|([\\d,.E-]+)\\|([\\d,.E-]+)\\|([\\d,.E-]+)\\|([\\w]+)\\|");
-	
+	regex rePl("\\|Plaetzchen\\|([\\d,.E-]+)\\|([\\d,.E-]+)\\|([\\d,.E-]+)\\|([\\d,.E-]+)\\|([\\d,.E-]+)\\|([\\w]+)\\|");
+	// Regex fuer die Backblech-Daten
+	regex reBb("\\|Backblech\\|([\\d,.E-]+)\\|");
+
 	smatch match;
 
 	while (getline(*f, st))
@@ -47,6 +52,7 @@ void DateiHandel::dateiLesen(Auftrag * a)
 		regex_search(st, match, reGes);
 		if (!match.empty())
 		{
+			cout << match.str(0) << endl;
 			a->setGesamtMehl(stof(match.str(1)));
 			a->setGesamtMilch(stof(match.str(2)));
 			a->setGesamtEier(stof(match.str(3)));
@@ -54,13 +60,48 @@ void DateiHandel::dateiLesen(Auftrag * a)
 			a->setGesamtZucker(stof(match.str(5)));
 			a->setGesamtNuesse(stof(match.str(6)));
 			a->setGesamtKakao(stof(match.str(7)));
+			reGesMatches += 1;
+			continue;
 		}
 
-		//regex_search(st, match, rePl);
-		//if (!match.empty())
-		//{
-		//}
+		regex_search(st, match, rePl);
+		if (!match.empty())
+		{
+			cout << match.str(0) << endl;
+			a->setAnzPlaetzchen(stoi(match.str(1)));
+			a->setPlaetzchenX(stof(match.str(2)));
+			a->setPlaetzchenY(stof(match.str(3)));
+			a->setBackzeit(stof(match.str(4)));
+			a->setBacktemperatur(stof(match.str(5)));
+			a->setPlaetzchenForm(match.str(6));
+			rePlMatches += 1;
+			continue;
+		}
+
+		regex_search(st, match, reBb);
+		if (!match.empty())
+		{
+			cout << match.str(0) << endl;
+			a->setAnzBachbleche(stoi(match.str(1)));
+			reBbMatches += 1;
+			continue;
+		}
+
 	}
+
+	if (reGesMatches < 1)
+	{
+		throw exception("Gesamtbedarf-Zeile in der Configdatei wurde nicht gefunden!");
+	}
+	if (rePlMatches < 1)
+	{
+		throw exception("Plaetzchen-Zeile in der Configdatei wurde nicht gefunden!");
+	}
+	if (reBbMatches < 1)
+	{
+		throw exception("Bachbleche-Zeile in der Configdatei wurde nicht gefunden!");
+	}
+
 
 	f->close();
 }

@@ -36,7 +36,17 @@ int main()
 
 	cout << endl;
 
-   
+	cout << "anzahlPlaetchen = " << a->getAnzPlaetzchen() << endl;
+	cout << "plaetzchenX = " << a->getPlaetzchenX() << endl;
+	cout << "plaetzchenY = " << a->getPlaetzchenY() << endl;
+	cout << "backzeit = " << a->getBackzeit() << endl;
+	cout << "backtemperatur = " << a->getBacktemperatur() << endl;
+	cout << "form = " << a->getPlaetzchenForm() << endl;
+
+	cout << endl;
+
+	cout << "anzBackbleche = " << a->getAnzBachbleche() << endl;
+
   //  Datei* my_datei = new Datei("b_team_config.txt");
 	// my_datei->dateiLesen();
 	// my_datei->berechneZeilen();
