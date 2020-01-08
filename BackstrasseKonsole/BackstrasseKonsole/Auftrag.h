@@ -18,7 +18,7 @@ private:
 	float backzeit;
 	float backtemperatur;
 	string plaetzchenForm;
-	int anzBachbleche;
+	int anzBackbleche;
 
 public:
 	Auftrag();
@@ -38,7 +38,7 @@ public:
 	void setBacktemperatur(float);
 	void setPlaetzchenForm(string);
 
-	void setAnzBachbleche(int);
+	void setAnzBackbleche(int);
 
 	float getGesamtMehl();
 	float getGesamtMilch();
@@ -55,7 +55,7 @@ public:
 	float getBacktemperatur();
 	string getPlaetzchenForm();
 
-	int getAnzBachbleche();
+	int getAnzBackbleche();
 
 };
 

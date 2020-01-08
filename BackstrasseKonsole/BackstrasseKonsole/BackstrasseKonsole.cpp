@@ -23,7 +23,9 @@ int main()
 	}
 	catch (exception e)
 	{
+		cout << "Lesen von Daten aus der Config fehlgeschlagen:" << endl;
 		cout << e.what() << endl;
+		return -1;
 	}
 
 	cout << "Mehl = " << a->getGesamtMehl() << endl;
@@ -45,11 +47,11 @@ int main()
 
 	cout << endl;
 
-	cout << "anzBackbleche = " << a->getAnzBachbleche() << endl;
+	cout << "anzBackbleche = " << a->getAnzBackbleche() << endl;
 
-  //  Datei* my_datei = new Datei("b_team_config.txt");
-	// my_datei->dateiLesen();
-	// my_datei->berechneZeilen();
-    
-  return 0; 
+	//  Datei* my_datei = new Datei("b_team_config.txt");
+	  // my_datei->dateiLesen();
+	  // my_datei->berechneZeilen();
+
+	return 0;
 }
