@@ -86,17 +86,23 @@ void Datei::dateiLesen(Auftrag * a)
 
 	}
 
+	string errmsg{ "" };
 	if (reGesMatches < 1)
 	{
-		throw exception("Gesamtbedarf-Zeile in der Configdatei wurde nicht gefunden!");
+		errmsg += "Gesamtbedarf\n";
 	}
 	if (rePlMatches < 1)
 	{
-		throw exception("Plaetzchen-Zeile in der Configdatei wurde nicht gefunden!");
+		errmsg += "Plaetzchen\n";
 	}
 	if (reBbMatches < 1)
 	{
-		throw exception("Backbleche-Zeile in der Configdatei wurde nicht gefunden!");
+		errmsg += "Backbleche\n";
+	}
+	if (!errmsg.empty())
+	{
+		errmsg = "Folgende notwendige Zeile(n) wurde(n) in der Configdatei nicht gefunden:\n" + errmsg;
+		throw exception(errmsg.c_str());
 	}
 
 
