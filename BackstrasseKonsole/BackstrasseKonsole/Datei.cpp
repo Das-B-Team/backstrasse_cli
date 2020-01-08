@@ -39,7 +39,7 @@ void Datei::dateiLesen(Auftrag * a)
 	int reBbMatches{ 0 };
 
 	// Regex fuer den Gesamtbedarf
-	regex reGes("\\|([\\d,.E-]+)\\|([\\d,.E-]+)\\|([\\d,.E-]+)\\|([\\d,.E-]+)\\|([\\d,.E-]+)\\|([\\d,.E-]+)\\|([\\d,.E-]+)\\|");
+	regex reGes("\\|Gesamt\\|([\\d,.E-]+)\\|([\\d,.E-]+)\\|([\\d,.E-]+)\\|([\\d,.E-]+)\\|([\\d,.E-]+)\\|([\\d,.E-]+)\\|([\\d,.E-]+)\\|");
 	// Regex fuer die Plaetzchen-Daten
 	regex rePl("\\|Plaetzchen\\|([\\d,.E-]+)\\|([\\d,.E-]+)\\|([\\d,.E-]+)\\|([\\d,.E-]+)\\|([\\d,.E-]+)\\|([\\w]+)\\|");
 	// Regex fuer die Backblech-Daten
