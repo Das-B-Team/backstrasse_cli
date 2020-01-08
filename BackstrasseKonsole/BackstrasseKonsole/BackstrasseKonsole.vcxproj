@@ -155,6 +155,7 @@
     <ClCompile Include="Backstrasse.cpp" />
     <ClCompile Include="BackstrasseKonsole.cpp" />
     <ClCompile Include="Datei.cpp" />
+    <ClCompile Include="ExceptionKlasseKonsole.cpp" />
     <ClCompile Include="Plaetzchen.cpp" />
     <ClCompile Include="Vorrat.cpp" />
     <ClInclude Include="Auftrag.h" />

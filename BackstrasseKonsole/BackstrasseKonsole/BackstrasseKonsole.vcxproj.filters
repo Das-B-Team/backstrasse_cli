@@ -9,6 +9,7 @@
     <ClCompile Include="Auftrag.cpp" />
     <ClCompile Include="Plaetzchen.cpp" />
     <ClCompile Include="Datei.cpp" />
+    <ClCompile Include="ExceptionKlasseKonsole.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Backstrasse.h" />
