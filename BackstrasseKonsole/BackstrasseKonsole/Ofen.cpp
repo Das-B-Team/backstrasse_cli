@@ -3,33 +3,33 @@
 using namespace std;
 
 
-Ofen::Ofen() : BackraumL{0.0}, OfenT {0.0}
+Ofen::Ofen() : backraumLaenge{0.0}, ofenTemperatur {0.0}
 {
 }
 
-Ofen::Ofen(float L, float T) : BackraumL {L}, OfenT {T}
+Ofen::Ofen(float L, float T) : backraumLaenge {L}, ofenTemperatur {T}
 {
 }
 
 
 void Ofen::setLaenge(float L)
 {
-	BackraumL = L;
+	backraumLaenge = L;
 }
 
 void Ofen::setTemperatur(float T)
 {
-	OfenT = T;
+	ofenTemperatur = T;
 }
 
 float Ofen::getLaenge()
 {
-	return BackraumL;
+	return backraumLaenge;
 }
 
 float Ofen::getTemperatur()
 {
-	return OfenT;
+	return ofenTemperatur;
 }
 
 
