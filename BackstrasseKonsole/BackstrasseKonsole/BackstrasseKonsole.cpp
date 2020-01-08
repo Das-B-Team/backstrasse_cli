@@ -1,7 +1,7 @@
 #include <iostream>
 #include <locale>
 #include "Auftrag.h"
-#include "DateiHandel.h"
+#include "Datei.h"
 #include "Backstrasse.h"
 #include "Datei.h"
 
@@ -15,7 +15,7 @@ int main()
 
 	Auftrag* a = new Auftrag();
 
-	DateiHandel d("b_team_config.txt");
+	Datei d("b_team_config.txt");
 
 	try
 	{
