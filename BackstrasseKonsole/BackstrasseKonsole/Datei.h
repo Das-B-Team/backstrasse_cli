@@ -1,21 +1,23 @@
 #pragma once
-#include<iostream>
-#include<fstream>
+#include <iostream>
+#include <fstream>
+#include <string>
+#include <regex>
+#include "Auftrag.h"
+
 using namespace std;
+
 class Datei
 {
 private:
 	string pfad;
 	fstream* f;
-	char str[260];
-	bool Dateioffenpruefen();
-
+	void Dateioffenpruefen(fstream* );
 public:
 	Datei();
 	Datei(string);
-
-	void dateiLesen();
-	void berechneZeilen();
+	void setPfad(string);
+	string getPfad();
+	void dateiLesen(Auftrag* );
 	~Datei();
 };
-

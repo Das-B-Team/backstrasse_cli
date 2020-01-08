@@ -1,73 +1,113 @@
 #include "Datei.h"
 
 
-Datei::Datei()
+
+void Datei::Dateioffenpruefen(fstream* f)
 {
-}
-
-Datei::Datei(string dateiname) : pfad{ dateiname }, f{ new fstream }
-{
-
-}
-
-
-bool Datei::Dateioffenpruefen()
-{
-	f->open(pfad);
-	if (f->is_open())
+	if (!f->is_open())
 	{
-		return true;
+		throw exception("Datei nicht zu oeffnen!...");
 	}
-	return false;
+}
+
+Datei::Datei() : pfad{ "" }, f{ f = new fstream() }
+{
+}
+
+Datei::Datei(string p) : pfad{ p }, f{ f = new fstream() }
+{
+}
+
+void Datei::setPfad(string p)
+{
+	pfad = p;
+}
+
+string Datei::getPfad()
+{
+	return pfad;
+}
+
+void Datei::dateiLesen(Auftrag * a)
+{
+	string st;
+	f->open(pfad, ios::in);
+	Dateioffenpruefen(f);
+
+	int reGesMatches{ 0 };
+	int rePlMatches{ 0 };
+	int reBbMatches{ 0 };
+
+	// Regex fuer den Gesamtbedarf
+	regex reGes("\\|([\\d,.E-]+)\\|([\\d,.E-]+)\\|([\\d,.E-]+)\\|([\\d,.E-]+)\\|([\\d,.E-]+)\\|([\\d,.E-]+)\\|([\\d,.E-]+)\\|");
+	// Regex fuer die Plaetzchen-Daten
+	regex rePl("\\|Plaetzchen\\|([\\d,.E-]+)\\|([\\d,.E-]+)\\|([\\d,.E-]+)\\|([\\d,.E-]+)\\|([\\d,.E-]+)\\|([\\w]+)\\|");
+	// Regex fuer die Backblech-Daten
+	regex reBb("\\|Backblech\\|([\\d,.E-]+)\\|");
+
+	smatch match;
+
+	while (getline(*f, st))
+	{
+		regex_search(st, match, reGes);
+		if (!match.empty())
+		{
+			cout << match.str(0) << endl;
+			a->setGesamtMehl(stof(match.str(1)));
+			a->setGesamtMilch(stof(match.str(2)));
+			a->setGesamtEier(stof(match.str(3)));
+			a->setGesamtBackpulver(stof(match.str(4)));
+			a->setGesamtZucker(stof(match.str(5)));
+			a->setGesamtNuesse(stof(match.str(6)));
+			a->setGesamtKakao(stof(match.str(7)));
+			reGesMatches += 1;
+			continue;
+		}
+
+		regex_search(st, match, rePl);
+		if (!match.empty())
+		{
+			cout << match.str(0) << endl;
+			a->setAnzPlaetzchen(stoi(match.str(1)));
+			a->setPlaetzchenX(stof(match.str(2)));
+			a->setPlaetzchenY(stof(match.str(3)));
+			a->setBackzeit(stof(match.str(4)));
+			a->setBacktemperatur(stof(match.str(5)));
+			a->setPlaetzchenForm(match.str(6));
+			rePlMatches += 1;
+			continue;
+		}
+
+		regex_search(st, match, reBb);
+		if (!match.empty())
+		{
+			cout << match.str(0) << endl;
+			a->setAnzBachbleche(stoi(match.str(1)));
+			reBbMatches += 1;
+			continue;
+		}
+
+	}
+
+	if (reGesMatches < 1)
+	{
+		throw exception("Gesamtbedarf-Zeile in der Configdatei wurde nicht gefunden!");
+	}
+	if (rePlMatches < 1)
+	{
+		throw exception("Plaetzchen-Zeile in der Configdatei wurde nicht gefunden!");
+	}
+	if (reBbMatches < 1)
+	{
+		throw exception("Bachbleche-Zeile in der Configdatei wurde nicht gefunden!");
+	}
+
+
 	f->close();
 }
 
 
-void Datei ::dateiLesen()
+Datei::~Datei()
 {
-	if (Dateioffenpruefen())
-	{
-		
-			while (f->getline(str, 260))
-			{
-				cout << str << endl;
-			}
-	}
-
-f->close();
+	delete(f);
 }
-
-void Datei::berechneZeilen()
-{
-	f->open(pfad);
-
-	if (!f->good())
-	{
-		cout << "error" << endl;
-	}
-
-
-	int anzahlZeichen{ 0 };
-	int anzahlZeilen{ 1 };
-	char zeichen;
-	char vorherigesZeichen{ '\0' };
-
-	while (f->get(zeichen))
-	{
-		if (zeichen == '\n')
-		{
-			anzahlZeilen++;
-		}
-		else
-		{
-			anzahlZeichen++;
-		}
-
-		
-	}
-
-	cout << "Anzahl der Zeichen: " << anzahlZeichen << endl;
-	cout << "Anzahl der Zeilen: " << anzahlZeilen << endl;
-}
-
-
