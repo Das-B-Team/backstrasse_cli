@@ -3,8 +3,8 @@ class Ofen
 {
 	//Ofen Parameter, T=Temperatur und L=Laenge würde deklariert 
 
-	float OfenTemperatur;
-	float BackraumLaenge;
+	float OfenT;
+	float BackraumL;
 
 
 public:
