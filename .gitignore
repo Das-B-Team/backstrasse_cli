@@ -348,3 +348,4 @@ MigrationBackup/
 
 # Ionide (cross platform F# VS Code tools) working folder
 .ionide/
+/BackstrasseKonsole/BackstrasseKonsole/b_team_config_old.txt
