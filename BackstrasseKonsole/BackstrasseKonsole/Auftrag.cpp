@@ -75,9 +75,9 @@ void Auftrag::setPlaetzchenForm(string s)
 	plaetzchenForm = s;
 }
 
-void Auftrag::setAnzBachbleche(int i)
+void Auftrag::setAnzBackbleche(int i)
 {
-	anzBachbleche = i;
+	anzBackbleche = i;
 }
 
 
@@ -146,7 +146,7 @@ string Auftrag::getPlaetzchenForm()
 	return plaetzchenForm;
 }
 
-int Auftrag::getAnzBachbleche()
+int Auftrag::getAnzBackbleche()
 {
-	return anzBachbleche;
+	return anzBackbleche;
 }

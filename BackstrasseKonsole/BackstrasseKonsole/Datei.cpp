@@ -79,7 +79,7 @@ void Datei::dateiLesen(Auftrag * a)
 		regex_search(st, match, reBb);
 		if (!match.empty())
 		{
-			a->setAnzBachbleche(stoi(match.str(1)));
+			a->setAnzBackbleche(stoi(match.str(1)));
 			reBbMatches += 1;
 			continue;
 		}
@@ -96,7 +96,7 @@ void Datei::dateiLesen(Auftrag * a)
 	}
 	if (reBbMatches < 1)
 	{
-		throw exception("Bachbleche-Zeile in der Configdatei wurde nicht gefunden!");
+		throw exception("Backbleche-Zeile in der Configdatei wurde nicht gefunden!");
 	}
 
 
