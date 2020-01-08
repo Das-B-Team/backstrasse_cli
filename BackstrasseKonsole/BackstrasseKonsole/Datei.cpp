@@ -52,7 +52,6 @@ void Datei::dateiLesen(Auftrag * a)
 		regex_search(st, match, reGes);
 		if (!match.empty())
 		{
-			cout << match.str(0) << endl;
 			a->setGesamtMehl(stof(match.str(1)));
 			a->setGesamtMilch(stof(match.str(2)));
 			a->setGesamtEier(stof(match.str(3)));
@@ -67,7 +66,6 @@ void Datei::dateiLesen(Auftrag * a)
 		regex_search(st, match, rePl);
 		if (!match.empty())
 		{
-			cout << match.str(0) << endl;
 			a->setAnzPlaetzchen(stoi(match.str(1)));
 			a->setPlaetzchenX(stof(match.str(2)));
 			a->setPlaetzchenY(stof(match.str(3)));
@@ -81,7 +79,6 @@ void Datei::dateiLesen(Auftrag * a)
 		regex_search(st, match, reBb);
 		if (!match.empty())
 		{
-			cout << match.str(0) << endl;
 			a->setAnzBachbleche(stoi(match.str(1)));
 			reBbMatches += 1;
 			continue;
