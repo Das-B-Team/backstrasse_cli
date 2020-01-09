@@ -3,6 +3,9 @@
 
 Auftrag::Auftrag()
 {
+	v0 = nullptr;
+	v1 = nullptr;
+	v2 = nullptr;
 }
 
 
@@ -80,6 +83,21 @@ void Auftrag::setAnzBackbleche(int i)
 	anzBackbleche = i;
 }
 
+void Auftrag::setV0(Verzierung* v)
+{
+	v0 = v;
+}
+
+void Auftrag::setV1(Verzierung* v)
+{
+	v1 = v;
+}
+
+void Auftrag::setV2(Verzierung* v)
+{
+	v2 = v;
+}
+
 
 float Auftrag::getGesamtMehl()
 {
@@ -149,4 +167,19 @@ string Auftrag::getPlaetzchenForm()
 int Auftrag::getAnzBackbleche()
 {
 	return anzBackbleche;
+}
+
+Verzierung* Auftrag::getV0()
+{
+	return v0;
+}
+
+Verzierung* Auftrag::getV1()
+{
+	return v1;
+}
+
+Verzierung* Auftrag::getV2()
+{
+	return v2;
 }

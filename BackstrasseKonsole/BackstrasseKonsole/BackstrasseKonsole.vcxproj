@@ -158,12 +158,12 @@
     <ClCompile Include="ExceptionKlasseKonsole.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Plaetzchen.cpp" />
-    <ClCompile Include="Vorrat.cpp" />
+    <ClCompile Include="Verzierung.cpp" />
     <ClInclude Include="Auftrag.h" />
     <ClInclude Include="Backstrasse.h" />
     <ClInclude Include="Datei.h" />
     <ClInclude Include="Plaetzchen.h" />
-    <ClInclude Include="Vorrat.h" />
+    <ClInclude Include="Verzierung.h" />
     <ClCompile Include="Band.cpp" />
     <ClCompile Include="Ofen.cpp" />
     <ClInclude Include="Band.h" />
