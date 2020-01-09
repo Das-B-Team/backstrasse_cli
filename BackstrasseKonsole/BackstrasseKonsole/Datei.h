@@ -7,6 +7,7 @@
 
 using namespace std;
 
+/// Klasse Datei
 class Datei
 {
 private:
@@ -18,6 +19,7 @@ public:
 	Datei(string);
 	void setPfad(string);
 	string getPfad();
+	/// Liest Plaetzchen-Auftrag Daten aus einer Textdatei und uebertraegt sie auf eine Instanz von Auftrag
 	void dateiLesen(Auftrag* );
 	~Datei();
 };

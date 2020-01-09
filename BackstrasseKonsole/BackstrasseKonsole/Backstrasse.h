@@ -45,6 +45,7 @@ public:
 	void backen();
 	bool checkBedarf();
 
+	void setAuftrag(Auftrag*);
 	void ofen_configurieren();
 	void band_configurieren();
 

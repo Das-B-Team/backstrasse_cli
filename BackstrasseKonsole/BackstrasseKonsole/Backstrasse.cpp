@@ -30,25 +30,7 @@ bool Backstrasse::configLesen()
 	a = new Auftrag();
 	Datei d("b_team_config.txt");
 
-	try
-	{
-		d.dateiLesen(a);
-	}
-	catch (exception e)
-	{
-		cout <<  e.what() << endl;
-	}
-
-	
-	/* "Mehl = " << a->getGesamtMehl() << endl;
-	erg "Milch = " << a->getGesamtMilch() << endl;
-	erg "Eier = " << a->getGesamtEier() << endl;
-	erg "Backpulver = " << a->getGesamtBackpulver() << endl;
-	erg "Zucker = " << a->getGesamtZucker() << endl;
-	erg "Nuesse = " << a->getGesamtNuesse() << endl;
-	erg "Kakao = " << a->getGesamtKakao() << endl;
-
-	erg endl; */
+	d.dateiLesen(a);
 
 	return true;
 }
@@ -124,6 +106,11 @@ bool Backstrasse::checkBedarf()
 		}
 		return ret;
 	}
+
+void Backstrasse::setAuftrag(Auftrag* af)
+{
+	a = af;
+}
 
 Auftrag* Backstrasse::getAuftrag()
 {
