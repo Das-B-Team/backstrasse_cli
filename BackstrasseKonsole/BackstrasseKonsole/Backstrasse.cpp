@@ -109,12 +109,6 @@ bool Backstrasse::checkBedarf()
 			erg = "zuwenig Backbleche";
 
 		}
-		//test
-		// benoetige Geschwindigkeit
-		float berechnetegsw;
-		//berechnetegsw = of->getLaenge() / (a->getBackzeit() * 60);
-		//if ((of->getLaenge() / (a->getBackzeit() * 60)) != speed)
-		//cout << "Berechnetegeschwindigkeit = " << berechnetegsw << endl;
 		if (of->getLaenge() / (a->getBackzeit() * 60) != speed)
 		{
 			cout << of->getLaenge() / (a->getBackzeit() * 60) << endl;
