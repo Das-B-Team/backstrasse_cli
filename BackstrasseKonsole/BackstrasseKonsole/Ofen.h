@@ -4,14 +4,14 @@ class Ofen
 	//Ofen Parameter, T=Temperatur und L=Laenge würde deklariert 
 
 	float ofenTemperatur;
-	float backraumLaenge;
-
+	const float backraumLaenge = 10.0; //10m Backraumlaenge
+	
 
 public:
       
 	Ofen();
-	Ofen(float, float);
-	void setLaenge(float);
+	Ofen(float);
+	
         void setTemperatur(float);
 
 	float getLaenge();
