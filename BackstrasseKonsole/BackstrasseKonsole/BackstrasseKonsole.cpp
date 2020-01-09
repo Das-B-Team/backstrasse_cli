@@ -7,7 +7,7 @@
 
 using namespace std;
 
-int main()
+int mainalternate()
 {
 	locale::global(locale(""));
 	cout.imbue(locale(""));
