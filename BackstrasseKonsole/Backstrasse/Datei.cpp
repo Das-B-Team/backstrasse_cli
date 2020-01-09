@@ -91,7 +91,6 @@ void Datei::dateiLesen(Auftrag * a)
 		{
 			if (stoi(match.str(2)) == 0)
 			{
-
 				a->setV0((new Verzierung()));
 				a->getV0()->setForm(match.str(1));
 				a->getV0()->setNo(stoi(match.str(2)));
@@ -100,7 +99,7 @@ void Datei::dateiLesen(Auftrag * a)
 				a->getV0()->setNuesse(stof(match.str(5)));
 				a->getV0()->setFarbe(match.str(6));
 			}
-			if (stoi(match.str(2)) == 1)
+			else if (stoi(match.str(2)) == 1)
 			{
 				a->setV1((new Verzierung()));
 				a->getV1()->setForm(match.str(1));
@@ -110,7 +109,7 @@ void Datei::dateiLesen(Auftrag * a)
 				a->getV1()->setNuesse(stof(match.str(5)));
 				a->getV1()->setFarbe(match.str(6));
 			}
-			if (stoi(match.str(2)) == 2)
+			else if (stoi(match.str(2)) == 2)
 			{
 				a->setV2((new Verzierung()));
 				a->getV2()->setForm(match.str(1));

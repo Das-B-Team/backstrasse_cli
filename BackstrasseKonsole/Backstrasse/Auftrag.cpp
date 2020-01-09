@@ -8,9 +8,11 @@ Auftrag::Auftrag()
 	v2 = nullptr;
 }
 
-
 Auftrag::~Auftrag()
 {
+	delete(v0);
+	delete(v1);
+	delete(v2);
 }
 
 void Auftrag::setGesamtMehl(float f)
