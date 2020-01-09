@@ -20,9 +20,9 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
-    <ProjectGuid>{C6E8B227-CCA7-45D1-9C75-31BC45E1D8FE}</ProjectGuid>
+    <ProjectGuid>{AF5C7EC5-4018-4C86-94D8-648859FB2308}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>BackstrasseKonsole</RootNamespace>
+    <RootNamespace>Backstrasse</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -153,21 +153,23 @@
   <ItemGroup>
     <ClCompile Include="Auftrag.cpp" />
     <ClCompile Include="Backstrasse.cpp" />
-    <ClCompile Include="BackstrasseKonsole.cpp" />
+    <ClCompile Include="Band.cpp" />
     <ClCompile Include="Datei.cpp" />
-    <ClCompile Include="ExceptionKlasseKonsole.cpp" />
     <ClCompile Include="Main.cpp" />
-    <ClCompile Include="Plaetzchen.cpp" />
+    <ClCompile Include="Ofen.cpp" />
     <ClCompile Include="Verzierung.cpp" />
+  </ItemGroup>
+  <ItemGroup>
     <ClInclude Include="Auftrag.h" />
     <ClInclude Include="Backstrasse.h" />
-    <ClInclude Include="Datei.h" />
-    <ClInclude Include="Plaetzchen.h" />
-    <ClInclude Include="Verzierung.h" />
-    <ClCompile Include="Band.cpp" />
-    <ClCompile Include="Ofen.cpp" />
     <ClInclude Include="Band.h" />
+    <ClInclude Include="Datei.h" />
+    <ClInclude Include="Exception.h" />
     <ClInclude Include="Ofen.h" />
+    <ClInclude Include="Verzierung.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="b_team_config.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
