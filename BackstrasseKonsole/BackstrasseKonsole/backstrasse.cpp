@@ -109,14 +109,11 @@ bool Backstrasse::checkBedarf()
 			erg = "zuwenig Backbleche";
 
 		}
-		//test
-		// benoetige Geschwindigkeit
-		if ( (of->getLaenge()/(a->getBackzeit()*60)) != speed)
+		if (of->getLaenge() / (a->getBackzeit() * 60) != speed)
 		{
 			cout << of->getLaenge() / (a->getBackzeit() * 60) << endl;
 			erg = "Geschwindigkeit ist falsch, sollte " + to_string(of->getLaenge()/(a->getBackzeit() * 60) ) + " sein";
 				
-			
 		}
 
 		if (!erg.empty())
@@ -127,6 +124,21 @@ bool Backstrasse::checkBedarf()
 		}
 		return ret;
 	}
+
+Auftrag* Backstrasse::getAuftrag()
+{
+	return a;
+}
+
+Ofen* Backstrasse::getOfen()
+{
+	return of;
+}
+
+Band* Backstrasse::getBand()
+{
+	return ba;
+}
 
 
 
