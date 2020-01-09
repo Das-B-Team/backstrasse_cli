@@ -17,13 +17,6 @@ int main(int argc, char* argv[])
 	//cout.imbue(locale(""));
 	//cin.imbue(locale(""));
 
-	//Auftrag* a = new Auftrag();
-	//Verzierung *v = new Verzierung();
-	////a->setVerz1(v);
-	//a->setVerz1(v);
-	//a->getVerz1()->setFarbe("pink");
-	//cout << a->getVerz1()->getFarbe() << endl;
-
 	if (argc < 12)
 	{
 		cout << "zu wenige Argumente" << endl;
