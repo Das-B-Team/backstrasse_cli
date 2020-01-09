@@ -1,5 +1,7 @@
 #pragma once
 #include <iostream>
+#include "Verzierung.h"
+
 using namespace std;
 
 class Auftrag
@@ -19,6 +21,10 @@ private:
 	float backtemperatur;
 	string plaetzchenForm;
 	int anzBackbleche;
+
+	Verzierung* v0;
+	Verzierung* v1;
+	Verzierung* v2;
 
 public:
 	Auftrag();
@@ -40,6 +46,12 @@ public:
 
 	void setAnzBackbleche(int);
 
+	void setV0(Verzierung*);
+	void setV1(Verzierung*);
+	void setV2(Verzierung*);
+
+
+
 	float getGesamtMehl();
 	float getGesamtMilch();
 	float getGesamtEier();
@@ -56,6 +68,10 @@ public:
 	string getPlaetzchenForm();
 
 	int getAnzBackbleche();
+
+	Verzierung* getV0();
+	Verzierung* getV1();
+	Verzierung* getV2();
 
 };
 

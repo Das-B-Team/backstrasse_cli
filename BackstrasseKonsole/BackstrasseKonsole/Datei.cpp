@@ -44,6 +44,8 @@ void Datei::dateiLesen(Auftrag * a)
 	regex rePl("\\|Plaetzchen\\|([\\d,.E-]+)\\|([\\d,.E-]+)\\|([\\d,.E-]+)\\|([\\d,.E-]+)\\|([\\d,.E-]+)\\|([\\w]+)\\|");
 	// Regex fuer die Backblech-Daten
 	regex reBb("\\|Backblech\\|([\\d,.E-]+)\\|");
+	// Regex fuer die Verzierung
+	regex reVe("\\|Verzierung\\|([\\w]+)\\|([\\d,.E-]+)\\|([\\d,.E-]+)\\|([\\d,.E-]+)\\|([\\d,.E-]+)\\|([\\w]+)\\|");
 
 	smatch match;
 
@@ -82,6 +84,42 @@ void Datei::dateiLesen(Auftrag * a)
 			a->setAnzBackbleche(stoi(match.str(1)));
 			reBbMatches += 1;
 			continue;
+		}
+
+		regex_search(st, match, reVe);
+		if (!match.empty())
+		{
+			if (stoi(match.str(2)) == 0)
+			{
+
+				a->setV0((new Verzierung()));
+				a->getV0()->setForm(match.str(1));
+				a->getV0()->setNo(stoi(match.str(2)));
+				a->getV0()->setMehl(stof(match.str(3)));
+				a->getV0()->setZucker(stof(match.str(4)));
+				a->getV0()->setNuesse(stof(match.str(5)));
+				a->getV0()->setFarbe(match.str(6));
+			}
+			if (stoi(match.str(2)) == 1)
+			{
+				a->setV1((new Verzierung()));
+				a->getV1()->setForm(match.str(1));
+				a->getV1()->setNo(stoi(match.str(2)));
+				a->getV1()->setMehl(stof(match.str(3)));
+				a->getV1()->setZucker(stof(match.str(4)));
+				a->getV1()->setNuesse(stof(match.str(5)));
+				a->getV1()->setFarbe(match.str(6));
+			}
+			if (stoi(match.str(2)) == 2)
+			{
+				a->setV2((new Verzierung()));
+				a->getV2()->setForm(match.str(1));
+				a->getV2()->setNo(stoi(match.str(2)));
+				a->getV2()->setMehl(stof(match.str(3)));
+				a->getV2()->setZucker(stof(match.str(4)));
+				a->getV2()->setNuesse(stof(match.str(5)));
+				a->getV2()->setFarbe(match.str(6));
+			}
 		}
 
 	}

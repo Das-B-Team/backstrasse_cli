@@ -47,6 +47,10 @@ public:
 
 	void ofen_configurieren();
 	void band_configurieren();
+
+	Auftrag* getAuftrag();
+	Ofen* getOfen();
+	Band* getBand();
 	//void verzieren();
 };
 
